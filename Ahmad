@@ -1,0 +1,115 @@
+# PDF erneut erstellen zur Sicherheit
+
+pdf = PDF()
+
+pdf.add_page()
+
+
+
+# Persönliche Daten
+
+pdf.chapter_title("Persönliche Daten")
+
+pdf.chapter_body(sanitize_text("""
+
+Name: Ahmad Al Youssef
+
+Adresse: Heidelberger Str. 32/1, 74080 Heilbronn
+
+Telefon: (bitte ergänzen)
+
+E-Mail: (bitte ergänzen)
+
+Geburtsdatum: (bitte ergänzen)
+
+Familienstand: Ledig
+
+Staatsangehörigkeit: Syrisch
+
+"""))
+
+
+
+# Berufsziel
+
+pdf.chapter_title("Berufsziel")
+
+pdf.chapter_body("Ich möchte mich um eine Stelle als IT-Fachinformatiker bewerben.")
+
+
+
+# Sprachkenntnisse
+
+pdf.chapter_title("Sprachkenntnisse")
+
+pdf.chapter_body("Arabisch (Muttersprache), Deutsch (B2), Englisch (Grundkenntnisse)")
+
+
+
+# Stärken
+
+pdf.chapter_title("Persönliche Stärken")
+
+pdf.chapter_body(sanitize_text("""
+
+- Flexibel und lernfähig
+
+- Schnelle Auffassungsgabe
+
+- Starkes Interesse an IT und Technik
+
+- Zielstrebig und motiviert
+
+"""))
+
+
+
+# Schulbildung
+
+pdf.chapter_title("Schulbildung")
+
+pdf.chapter_body("9. Klasse in Syrien besucht (ohne Abschluss)")
+
+
+
+# Berufserfahrung
+
+pdf.chapter_title("Berufserfahrung")
+
+pdf.chapter_body("Reinigungskraft (Mini-Job), Heilbronn, seit 2024")
+
+
+
+# Kurse und Weiterbildungen
+
+pdf.chapter_title("Kurse und Weiterbildungen")
+
+pdf.chapter_body(sanitize_text("""
+
+- B2-Berufssprachkurs, laufend
+
+- Integrationkurs (B1 abgeschlossen)
+
+- Selbststudium im IT-Bereich (z. B. YouTube-Kanal Benjamin)
+
+- Zukünftige Teilnahme an IT-Weiterbildung geplant
+
+"""))
+
+
+
+# Hobbys und Interessen
+
+pdf.chapter_title("Hobbys und Interessen")
+
+pdf.chapter_body("IT, Computertechnik, Fitness, Weiterbildung, Sprachen lernen")
+
+
+
+# PDF speichern
+
+output_path = "/mnt/data/Lebenslauf_Ahmad_Al_Youssef_IT_2025_v2.pdf"
+
+pdf.output(output_path)
+
+output_path
